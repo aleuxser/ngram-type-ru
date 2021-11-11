@@ -193,19 +193,19 @@
                     <div class="form-group">
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="bi-grams" name="customRadio" class="custom-control-input" value="bigrams">
-                            <label class="custom-control-label" for="bi-grams">Top 50 Bigrams</label>
+                            <label class="custom-control-label" for="bi-grams">Топ 50 Биграмм</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="tri-grams" name="customRadio" class="custom-control-input" value="trigrams">
-                            <label class="custom-control-label" for="tri-grams">Top 50 Trigrams</label>
+                            <label class="custom-control-label" for="tri-grams">Топ 50 Триграмм</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="four-grams" name="customRadio" class="custom-control-input" value="tetragrams">
-                            <label class="custom-control-label" for="four-grams">Top 50 Tetragrams</label>
+                            <label class="custom-control-label" for="four-grams">Топ 50 Тетраграмм</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="words_200" name="customRadio" class="custom-control-input" value="words_200">
-                            <label class="custom-control-label" for="words_200">Top 200 English Words</label>
+                            <label class="custom-control-label" for="words_200">Топ 200 Русских слов</label>
                         </div>
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="custom_words" name="customRadio" class="custom-control-input" value="custom_words">
@@ -215,26 +215,26 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend class="combination">Generator</legend>
+                    <legend class="combination">Генератор</legend>
                     <div class="form-group">
-                        <label class="col-form-label col-form-label-sm">Combination</label>
+                        <label class="col-form-label col-form-label-sm">Комбинация</label>
                         <input v-model.number="data[data['source']].combination" v-on:change="refreshPhrases"
                             class="form-control form-control-sm" type="number" min="1"
                         >
-                        <label class="col-form-label col-form-label-sm">Repetition</label>
+                        <label class="col-form-label col-form-label-sm">Повторение</label>
                         <input v-model.number="data[data['source']].repetition" v-on:change="refreshPhrases"
                             class="form-control form-control-sm" type="number" min="1"
                         >
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend class="repetition">Threshold</legend>
+                    <legend class="repetition">Порог</legend>
                     <div class="form-group">
-                        <label class="col-form-label col-form-label-sm">WPM</label>
+                        <label class="col-form-label col-form-label-sm">СВМ</label>
                         <input v-model.number="data[data['source']].minimumWPM" v-on:change="save"
                             class="form-control form-control-sm" type="number" min="1" max="500"
                         >
-                        <label class="col-form-label col-form-label-sm">Accuracy</label>
+                        <label class="col-form-label col-form-label-sm">Точность</label>
                         <input v-model.number="data[data['source']].minimumAccuracy"
                             class="form-control form-control-sm" type="number" min="1" max="100" v-on:change="save"
                         >
@@ -275,9 +275,9 @@
             </div>
         </div>
         <div class="center stats">
-            <h4>Raw WPM: {{ rawWPM }} </h4>
-            &nbsp; &nbsp; &nbsp; &nbsp; <h4>Accuracy: {{ accuracy }} % </h4>
-            &nbsp; &nbsp; &nbsp; &nbsp; <h4>Average WPM: {{ averageWPM }} </h4>
+            <h4>Сырое СВМ: {{ rawWPM }} </h4>
+            &nbsp; &nbsp; &nbsp; &nbsp; <h4>Сырая Точность: {{ accuracy }} % </h4>
+            &nbsp; &nbsp; &nbsp; &nbsp; <h4>Среднее СВМ: {{ averageWPM }} </h4>
         </div>
 
         <div id="timer-wrapper" class="center">
