@@ -1,5 +1,8 @@
 # Ngram Type
 
+## Russian Variant
+
+This repo replaces english bigrams, trigrams etc. with russian ones. This will suit best for translators or native speakers (like me). I've got to say that I found this very **very** useful for learning touch typing and, therefore, decided to make this fork a thing. Giant thanks to the original creator!
 
 ## About
 
@@ -75,4 +78,7 @@ Increasing `Combination` and decreasing `Repetition` (which re-shuffles the data
 
 ## Hosted Version
 You could access the online version using GitHub Pages:
+- https://aleuxser.github.io/ngram-type-ru/
+
+You could access the original version using GitHub Pages:
 - https://ranelpadon.github.io/ngram-type/
