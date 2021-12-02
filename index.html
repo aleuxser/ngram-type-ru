@@ -209,8 +209,8 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="custom_words" name="customRadio" class="custom-control-input" value="custom_words">
-                            <label class="custom-control-label" for="custom_words">Pangrams / </label>
-                            <a href="#" data-toggle="modal" data-target="#custom-words-modal" v-on:click="customWordsModalShow">Custom</a>
+                            <label class="custom-control-label" for="custom_words">/Панграммы / </label>
+                            <a href="#" data-toggle="modal" data-target="#custom-words-modal" v-on:click="customWordsModalShow">Настроить</a>
                         </div>
                     </div>
                 </fieldset>
@@ -262,7 +262,7 @@
             </div>
 
             <div class="center">
-                <h4>Lesson {{ data[data['source']].phrasesCurrentIndex + 1 }} / {{ data[data['source']].phrases.length }}</h4>
+                <h4>Занятие {{ data[data['source']].phrasesCurrentIndex + 1 }} / {{ data[data['source']].phrases.length }}</h4>
             </div>
             <div class="expected-phrase word text-white bg-primary mb-3">
                 {{ expectedPhrase }}
@@ -270,7 +270,7 @@
             <div class="form-group input-fields">
                 <label class="col-form-label col-form-label-lg"></label>
                 <input v-model="typedPhrase" :class="{'form-control': true, 'form-control-lg': true, 'incorrect-input': !isInputCorrect}"
-                    id="input-typing" type="text" placeholder="Re-type if failed, press <TAB> or <ESC> to reset" spellcheck="false" v-on:keyup="keyHandler"
+		       id="input-typing" type="text" placeholder="Перепеши если ошибся, нажми <TAB или <ESC> чтобы сбросить" spellcheck="false" v-on:keyup="keyHandler"
                 >
             </div>
         </div>
@@ -293,13 +293,13 @@
             <a class="title" href="https://github.com/aleuxser/ngram-type-ru/issues/new" target="_blank">
                 <i class="fa fa-lightbulb-o"></i>
                 <div class="label">
-                    Обкашлять фичу
+                    Предложить идею
                 </div>
             <a>
             <a class="title" href="https://ko-fi.com/ranelpadon" target="_blank">
                 <i class="fa fa-coffee"></i>
                 <div class="label">
-                    Подкинуть автору оригинала баблишка
+                    поддержать создателя оригинала
                 </div>
             <a>
         </h3>
@@ -307,7 +307,7 @@
         <div class="form-group sound-toggler-wrapper">
             <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="sound-toggler" v-model="data.soundEnabled">
-                <label class="custom-control-label" for="sound-toggler">Sound</label>
+                <label class="custom-control-label" for="sound-toggler">Звук</label>
             </div>
         </div>
     </div>
