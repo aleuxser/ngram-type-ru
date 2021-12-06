@@ -189,7 +189,7 @@
         <div class="card-body">
             <div class="center">
                 <fieldset>
-                    <legend>Source</legend>
+                    <legend>Использовать</legend>
                     <div class="form-group">
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="bi-grams" name="customRadio" class="custom-control-input" value="bigrams">
@@ -209,7 +209,7 @@
                         </div>
                         <div class="custom-control custom-radio">
                             <input v-model="data.source" type="radio" id="custom_words" name="customRadio" class="custom-control-input" value="custom_words">
-                            <label class="custom-control-label" for="custom_words">/Панграммы / </label>
+                            <label class="custom-control-label" for="custom_words">Панграммы / </label>
                             <a href="#" data-toggle="modal" data-target="#custom-words-modal" v-on:click="customWordsModalShow">Настроить</a>
                         </div>
                     </div>
@@ -249,7 +249,7 @@
                         <div class="modal-header">
                         </div>
                         <div class="modal-body">
-                            <p>Put the custom words here, separated by spaces/newlines.</p>
+                            <p>Впиши сюда свои слова, разделив их пробелами/строками.</p>
                             <textarea id="custom-words-modal--text-area" rows="10" cols="94">
                             </textarea>
                         </div>
@@ -270,7 +270,7 @@
             <div class="form-group input-fields">
                 <label class="col-form-label col-form-label-lg"></label>
                 <input v-model="typedPhrase" :class="{'form-control': true, 'form-control-lg': true, 'incorrect-input': !isInputCorrect}"
-		       id="input-typing" type="text" placeholder="Перепеши если ошибся, нажми <TAB или <ESC> чтобы сбросить" spellcheck="false" v-on:keyup="keyHandler"
+		       id="input-typing" type="text" placeholder="Перепиши если ошибся, <TAB или <ESC> чтобы сбросить" spellcheck="false" v-on:keyup="keyHandler"
                 >
             </div>
         </div>
