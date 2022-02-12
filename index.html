@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ngram Type Ru</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <meta name="description" content="Тренажер слепой печати, который использует Нграмы в качестве источника; позволяет настраивать автомаически сгенерированнные упражнения и ставить минимальный порог скорости печати. Также имеются звуковые и цветовые эффекты.">
+    <meta name="keywords" content="нграм печать, нграм, н-грам, печать, слепая печать, ракладка клавиатуры, колемак, дворак, норман, воркман, воркмэн">
+    <meta name="author" content="Ранел Падон">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="RqOYH5UBWT4DVyfEYHXjrPThEWNS7JcCI5ZiYnd-JW4" />
+
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <meta charset="UTF-8">
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Ngram Type</title>
 
     <!-- jQuery required by Bootstrap. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -83,7 +89,7 @@
 
         .expected-phrase,
         input.form-control-lg {
-            max-width: 60rem;
+            max-width: 80rem;
             margin: auto;
             height: auto;
         }
@@ -270,7 +276,7 @@
             <div class="form-group input-fields">
                 <label class="col-form-label col-form-label-lg"></label>
                 <input v-model="typedPhrase" :class="{'form-control': true, 'form-control-lg': true, 'incorrect-input': !isInputCorrect}"
-		       id="input-typing" type="text" placeholder="Перепиши если ошибся, <TAB или <ESC> чтобы сбросить" spellcheck="false" v-on:keyup="keyHandler"
+		       id="input-typing" type="text" autocorrect="off" autocapitalize="none" placeholder="Перепиши если ошибся, <TAB> или <ESC> чтобы сбросить" spellcheck="false" v-on:keyup="keyHandler"
                 >
             </div>
         </div>
